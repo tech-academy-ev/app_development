@@ -1,0 +1,12 @@
+# App Development with Flutter
+
+## Introduction
+The ''App Development Track'' is the third offering by the Tech-Academy and is offered in parallel to the Data Science- and Web- Track. The course will be offered for the first time in the summer semester of 2022 and will be supervised by Steffen Knödler. Steffen graduated with a Bachelor's degree in Economics & Business Administration from Goethe University. He holds a Master’s degree in IT and Digital innovation and has been working as a Full-Stack Flutter developer for almost 2 years. 
+
+The app development course introduces its participants to the cross-platform framework Flutter. Flutter allows developers to develop apps for Android and iOS with one programming language (Dart). Although the framework can be compiled for other platforms, such as web, macOS and Windows, this course will focus primarily on mobile app development. Flutter is an open-source technology and is mainly developed by Google. Android & iOS platforms are Flutter’s most mature environment, for which the framework has been optimized for many years. In the last year, Flutter has overtaken other tools and become the most popular toolkit for cross-platform mobile development. In February 2022, nearly 500,000 Flutter apps have already been published to the Google Play Store, and more and more large companies, such as BMW, Alibaba, Philips and Google, develop apps based on Flutter. Like no other framework, Flutter offers the possibility to develop with one codebase for almost any platform, is very mature in mobile app development on Android and iOS and has a strong and growing community.
+
+In this course, participants will gain their first experience with Android Studio, Android Emulators and Flutter, but will also be introduced to Git and get an insight into the work of an app developer. We want to show how participants can find the right resources to learn and we will try to support all participants making their very first app development steps.
+
+
+## Objectives
+Participants will learn the basics of app development with Flutter and will be able to develop their own apps for iOS and Android. By the end of this course, participants will be able to create a Flutter app with a variety of pages, enable navigation between pages, and customize widgets to meet requirements.

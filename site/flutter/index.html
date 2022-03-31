@@ -1,0 +1,988 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+    
+    
+      
+        <title>Introduction to Flutter - App Development with Flutter</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8ab0c697.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-flutter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="App Development with Flutter" class="md-header__button md-logo" aria-label="App Development with Flutter" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            App Development with Flutter
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Flutter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="App Development with Flutter" class="md-nav__button md-logo" aria-label="App Development with Flutter" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    App Development with Flutter
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction to Flutter
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction to Flutter
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#differentiation-from-other-frameworks" class="md-nav__link">
+    Differentiation from other frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedder" class="md-nav__link">
+    Embedder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engine" class="md-nav__link">
+    Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework" class="md-nav__link">
+    Framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dart-syntax" class="md-nav__link">
+    Dart Syntax
+  </a>
+  
+    <nav class="md-nav" aria-label="Dart Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-and-constants" class="md-nav__link">
+    Variables and Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-and-conditions" class="md-nav__link">
+    Null and Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection-literals" class="md-nav__link">
+    Collection literals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-oriented-classes" class="md-nav__link">
+    Object-oriented Classes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flutter-syntax" class="md-nav__link">
+    Flutter Syntax
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curriculum/" class="md-nav__link">
+        Curriculum
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course/" class="md-nav__link">
+        Course
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../additional_resources/" class="md-nav__link">
+        Additional Resources
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#differentiation-from-other-frameworks" class="md-nav__link">
+    Differentiation from other frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedder" class="md-nav__link">
+    Embedder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engine" class="md-nav__link">
+    Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework" class="md-nav__link">
+    Framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dart-syntax" class="md-nav__link">
+    Dart Syntax
+  </a>
+  
+    <nav class="md-nav" aria-label="Dart Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-and-constants" class="md-nav__link">
+    Variables and Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-and-conditions" class="md-nav__link">
+    Null and Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection-literals" class="md-nav__link">
+    Collection literals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-oriented-classes" class="md-nav__link">
+    Object-oriented Classes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flutter-syntax" class="md-nav__link">
+    Flutter Syntax
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="introduction-to-flutter">Introduction to Flutter</h1>
+<p>Flutter is an open source UI development kit from Google. Flutter can be used to develop cross-platform apps in the Dart programming language. A Flutter program should be able to run on the following target platforms without major adjustments: WebApp, Android, iOS, Windows, Linux, macOS, and Google Fuchsia. Flutter itself is written in C++ and uses the Dart Virtual Machine (Dart VM), as well as the Skia graphics library.</p>
+<h2 id="differentiation-from-other-frameworks">Differentiation from other frameworks</h2>
+<p>One of the ways Flutter differs from other frameworks is that it does not use WebView or OEM widgets, which are pre-installed on the end device. When a Native App interacts with the platform to create a widget, it typically accesses the OEM (Original Equipment Manufacturer) widgets on the smartphone or tablet. Flutter eliminates this intermediate step. Instead, the framework uses its own high-performance render engine, Skia, to create the necessary widgets. The open source graphics library for creating 2D graphics connects via interfaces with the respective existing, operating system-dependent, native software development kits.</p>
+<p>Flutter is executed using ahead-of-time compilers (AOT compilers). Only in the development phase, just-in-time compilers (JIT compilers) are used for faster testing processes. Each app based on Flutter is composed of container, text, image, icon and other widgets, which are individually interpreted and displayed on a canvas element powered by the Skia graphics library. The platform then analyzes the widgets constructed in this way and forwards the events provoked by the end user's interaction to the app.</p>
+<h2 id="architecture">Architecture</h2>
+<p>The framework is essentially constructed from three process units. </p>
+<figure>
+    <image src="/images/archdiagram.png" alt="Flutter Architecture">
+    <figcaption>Source: https://docs.flutter.dev/resources/architectural-overview</figcaption>
+</figure>
+
+<h3 id="embedder">Embedder</h3>
+<p>At the lowest level and at the heart of the engine, platform-specific embedders are defined. Their job is to connect the rendering with the native screen information, input events, etc. For this purpose, the embedders interact with the engine layer via simple C/C++ APIs. However, these APIs are only mapped internally. This layer is composed of a shell, a human-machine interface, that hosts Dart's virtual machine (DartVM). This shell is platform-specific and provides access to the associated native APIs. They implement OS-specific code, such as communication with the app's Input Method Editor (IME) and lifecycle events. The actual architecture, however, consists of two elements: the engine and the framework.</p>
+<h3 id="engine">Engine</h3>
+<p>Flutter's middle layer, written in C/C++, contains a variety of components that are crucial to the functionality of the framework and its basic operation. These include the Skia graphics engine and shells, which are accessed through APIs represented by the dart:ul library. Using the defined classes in this library, such as Canvas, Paint and TextBox, it is possible to visually design an app.</p>
+<h3 id="framework">Framework</h3>
+<p>This is the most important layer that hosts all the libraries and packages necessary to develop an app. The framework is the component that is programmed in Dart and which you need to know. In this section, the operations for creating widgets, for instance, are located. You, as a developer, do not need to know much about the embedder and engine unit. To develop fast and beautiful apps, you only need to know the framework. In the FLutter framework, everything is a widget. A widget is a basic component in a Futter app, which in turn can itself consist of other widgets. A widget bundles logic, interaction, and presentation within an object.There are a number of pre-built widgets that map familiar and often needed interactions, such as buttons, lists, checkboxes, tabs, and so on. Flutter does not use the widgets of the respective platform, but implements them itself. Before we dive deeper into the flutter framework and its syntax, let us consider the programming language dart and its syntax.</p>
+<h2 id="dart-syntax">Dart Syntax</h2>
+<p>​​Dart is an open-source, general-purpose, object-oriented programming language with C-style syntax developed by Google in 2011. The purpose of Dart programming is to create a frontend user interface for the web and mobile apps. It is inspired by other programming languages such as Java, JavaScript, C#, and is Strongly Typed. Since Dart is a compiled language so you cannot execute your code directly; instead, the compiler parses it and transfers it into machine code. If you know javascript, dart is very easy to learn. Dart supports most of the common concepts of programming languages like classes, interfaces, and functions. </p>
+<p>You do not need to know dart in detail to build a flutter app. Actually, you can even pick up dart while learning flutter and you do not have to learn dart before. However, knowledge of the programming language will help you develop apps.</p>
+<h3 id="variables-and-constants">Variables and Constants</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="kd">var</span> <span class="n">dog1</span> <span class="o">=</span> <span class="s2">&quot;Max&quot;</span><span class="p">;</span> <span class="c1">// this is a variable</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="c1">// a variable can be final, which means that it must be initialized. Once assigned a  value, a final variable&#39;s value cannot be changed.</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="kd">final</span> <span class="n">maleDogs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Milo&quot;</span><span class="p">];</span> <span class="c1">// mutable single-assignment variable</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">maleDogs</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Cooper&quot;</span><span class="p">);</span> <span class="c1">// ✅ this is allowed (you can add an element to the list)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="n">maleDogs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Cooper&quot;</span><span class="p">];</span> <span class="c1">// ❌ this is not allowed (you cannot reassign the variable)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="k">const</span> <span class="n">femaleDogs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Luna&quot;</span><span class="p">,</span> <span class="s2">&quot;Bella&quot;</span><span class="p">];</span> <span class="c1">// compile time constant</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="n">femaleDogs</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Winona&quot;</span><span class="p">);</span> <span class="c1">// ❌ this is not allowed (you cannot change the variable)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">femaleDogs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Winona&quot;</span><span class="p">];</span> <span class="c1">// ❌ this is not allowed  </span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="null-and-conditions">Null and Conditions</h3>
+<p>In Dart, undefined values are null. Expressions in conditionals may only be boolean.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="kd">var</span> <span class="n">collar</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">toys</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">amountOfMeals</span> <span class="o">=</span> <span class="m">0</span> <span class="o">/</span> <span class="m">0</span><span class="p">,</span> <span class="c1">// NaN</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="n">owner</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">age</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="n">breed</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">collar</span><span class="p">)</span> <span class="n">print</span><span class="p">(</span><span class="s1">&#39;bark&#39;</span><span class="p">);</span> <span class="c1">// bark (means: if not false → if true)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="c1">// same as: </span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">collar</span><span class="p">)</span> <span class="p">{</span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;bark&#39;</span><span class="p">);}</span> <span class="c1">// bark </span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">toys</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="n">print</span><span class="p">(</span><span class="s1">&#39;bark&#39;</span><span class="p">);</span> <span class="c1">// bark (checks if toys is null)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">amountOfMeals</span><span class="p">.</span><span class="n">isNaN</span><span class="p">)</span> <span class="n">print</span><span class="p">(</span><span class="s1">&#39;bark&#39;</span><span class="p">);</span> <span class="c1">// bark</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">owner</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">)</span> <span class="n">print</span><span class="p">(</span><span class="s1">&#39;bark&#39;</span><span class="p">);</span> <span class="c1">// bark (the string is empty)</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="n">print</span><span class="p">(</span><span class="s1">&#39;bark&#39;</span><span class="p">);</span> <span class="c1">// bark (checks if age is zero)</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">breed</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="n">print</span><span class="p">(</span><span class="s1">&#39;bark&#39;</span><span class="p">);</span> <span class="c1">// bark (checks if breed is null) </span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="collection-literals">Collection literals</h3>
+<p>An Array in Javascript is a List in Dart. An Object in Javascript is a Map in Dart.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="kd">var</span> <span class="n">dogList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Lucy&quot;</span><span class="p">,</span> <span class="s2">&quot;Cooper&quot;</span><span class="p">,</span> <span class="s2">&quot;Zeus&quot;</span><span class="p">];</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="kd">var</span> <span class="n">dogMap</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="s1">&#39;first&#39;</span><span class="o">:</span> <span class="s2">&quot;Lucy&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="s1">&#39;second&#39;</span><span class="o">:</span> <span class="s2">&quot;Cooper&quot;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="p">};</span> <span class="c1">// could use #first symbol instead</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="kd">var</span> <span class="n">dogSet</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Lucy&quot;</span><span class="p">,</span> <span class="s2">&quot;Cooper&quot;</span><span class="p">,</span> <span class="s2">&quot;Zeus&quot;</span><span class="p">};</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="n">print</span><span class="p">(</span><span class="n">dogList</span><span class="p">.</span><span class="n">length</span><span class="p">);</span> <span class="c1">// 3</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="n">print</span><span class="p">(</span><span class="n">dogMap</span><span class="p">.</span><span class="n">length</span><span class="p">);</span> <span class="c1">// 2</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>    <span class="n">print</span><span class="p">(</span><span class="n">dogSet</span><span class="p">.</span><span class="n">length</span><span class="p">);</span> <span class="c1">// 3  </span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="object-oriented-classes">Object-oriented Classes</h3>
+<p>An Array in Javascript is a List in Dart. An Object in Javascript is a Map in Dart.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">class</span> <span class="nc">Dog</span> <span class="p">{</span> <span class="c1">// Class “Dog”</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="kd">final</span> <span class="kt">String</span> <span class="n">name</span><span class="p">;</span> <span class="c1">// variable name of type String</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="kd">final</span> <span class="kt">int</span> <span class="n">phone</span><span class="p">;</span> <span class="c1">// variable phone of type integer</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">Dog</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="n">phone</span><span class="p">});</span> <span class="c1">// example of unnamed and named parameter</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="n">tag</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">If you found me please call </span><span class="si">${</span><span class="n">phone</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="n">print</span><span class="p">(</span><span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Luna&#39;</span><span class="p">,</span> <span class="nl">phone:</span> <span class="m">6198887421</span><span class="p">).</span><span class="n">tag</span><span class="p">());</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="c1">// Luna</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="c1">// If you found me please call 6198887421!</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
+<h2 id="flutter-syntax">Flutter Syntax</h2>
+<p>As soon as you create a new flutter project, the flutter “Hello-world” project will be displayed. The Flutter hello-world project is a very simple counter app. You can press a button to increase the counter and the current count is displayed in the middle of the screen. We added the source code and our own comments to the guide to help you understand the minimum-viable app source code. Please read the comments carefully.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-4-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-4-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-4-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-4-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-4-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-4-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-4-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-4-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-4-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-4-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-4-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-4-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-4-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-4-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-4-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-4-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-4-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-4-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-4-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-4-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-4-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-4-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-4-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-4-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-4-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-4-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-4-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-4-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-4-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-4-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-4-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-4-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-4-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-4-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-4-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-4-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-4-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-4-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-4-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-4-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-4-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-4-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-4-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-4-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-4-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-4-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-4-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-4-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-4-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-4-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-4-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-4-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-4-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-4-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-4-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-4-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-4-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-4-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-4-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-4-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-4-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-4-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-4-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-4-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-4-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-4-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-4-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-4-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-4-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-4-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-4-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-4-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-4-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-4-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-4-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-4-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-4-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-4-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-4-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-4-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-4-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-4-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-4-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-4-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-4-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-4-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-4-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-4-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-4-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-4-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-4-100">100</a></span>
+<span class="normal"><a href="#__codelineno-4-101">101</a></span>
+<span class="normal"><a href="#__codelineno-4-102">102</a></span>
+<span class="normal"><a href="#__codelineno-4-103">103</a></span>
+<span class="normal"><a href="#__codelineno-4-104">104</a></span>
+<span class="normal"><a href="#__codelineno-4-105">105</a></span>
+<span class="normal"><a href="#__codelineno-4-106">106</a></span>
+<span class="normal"><a href="#__codelineno-4-107">107</a></span>
+<span class="normal"><a href="#__codelineno-4-108">108</a></span>
+<span class="normal"><a href="#__codelineno-4-109">109</a></span>
+<span class="normal"><a href="#__codelineno-4-110">110</a></span>
+<span class="normal"><a href="#__codelineno-4-111">111</a></span>
+<span class="normal"><a href="#__codelineno-4-112">112</a></span>
+<span class="normal"><a href="#__codelineno-4-113">113</a></span>
+<span class="normal"><a href="#__codelineno-4-114">114</a></span>
+<span class="normal"><a href="#__codelineno-4-115">115</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// import flutter component</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">import</span> <span class="s1">&#39;package:flutter/material.dart&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// when run code, trigger the function main()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1">// main runs the widget “MyApp”</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="n">runApp</span><span class="p">(</span><span class="n">MyApp</span><span class="p">());</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c1">// 1. Widget is stateless (can only have one state, cannot change state)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="kd">class</span> <span class="nc">MyApp</span> <span class="kd">extends</span> <span class="n">StatelessWidget</span> <span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="c1">// Widget contains &quot;build()&quot; method</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="nd">@override</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>        <span class="c1">// the build method returns the widget MaterialApp</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>        <span class="c1">// MaterialApp is only used once in a flutter application</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>        <span class="c1">// you should always add this widget at the beginning of the application</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>        <span class="c1">// as it provides many useful features, such as theming</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>        <span class="k">return</span> <span class="n">MaterialApp</span><span class="p">(</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>            <span class="c1">// title of the app</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>            <span class="nl">title:</span> <span class="s1">&#39;Flutter Demo&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>            <span class="c1">// do not show a debug banner</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>            <span class="nl">debugShowCheckedModeBanner:</span> <span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a>            <span class="c1">// defining the color of the theme</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a>            <span class="nl">theme:</span> <span class="n">ThemeData</span><span class="p">(</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a>                <span class="nl">primarySwatch:</span> <span class="n">Colors</span><span class="p">.</span><span class="n">blue</span><span class="p">,</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>            <span class="p">),</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a>            <span class="c1">// the widget MaterialApp contains the app “MyHomePage”</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a>            <span class="nl">home:</span> <span class="k">const</span> <span class="n">MyHomePage</span><span class="p">(),</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a>        <span class="p">);</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a>    <span class="p">}</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="p">}</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="c1">// 2. Widget is stateful (it can have multiple states)</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="kd">class</span> <span class="nc">MyHomePage</span> <span class="kd">extends</span> <span class="n">StatefulWidget</span> <span class="p">{</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a>    <span class="c1">// this is the constructor</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a>    <span class="c1">// you can provide a key to the MyHomePage widget if you use this widget multiple </span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a>    <span class="c1">// times across your app. If you do that, the framework knows, that it is</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a>    <span class="c1">// the same widget and has not to create a new “MyHomePage”-Widget</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a>    <span class="c1">// however, you do not need to provide a key.</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a>    <span class="k">const</span> <span class="n">MyHomePage</span><span class="p">({</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43"></a>        <span class="c1">// type “Key”. The “?” indicates that it is nullable</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44"></a>        <span class="n">Key</span><span class="o">?</span> <span class="n">Key</span><span class="p">,</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45"></a>        <span class="c1">// this is the super constructor. If a key is provided to the widget, the </span>
+<a id="__codelineno-4-46" name="__codelineno-4-46"></a>        <span class="c1">// the super constructor will transfer the key to the widget “Stateful”</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47"></a>    <span class="p">})</span> <span class="o">:</span> <span class="k">super</span><span class="p">(</span><span class="nl">key:</span> <span class="n">key</span><span class="p">);</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48"></a>
+<a id="__codelineno-4-49" name="__codelineno-4-49"></a>    <span class="c1">// we override the state of the widget “StateFulWidget”</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50"></a>    <span class="c1">// we create an own state for our stateful widget “MyHomePage”</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51"></a>    <span class="nd">@override</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52"></a>    <span class="n">_MyHomePageState</span> <span class="n">createState</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="n">_MyHomePageState</span><span class="p">();</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="p">}</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54"></a>
+<a id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="c1">// this part of the widget describes the state of the widget</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="kd">class</span> <span class="nc">_MyHomePageState</span> <span class="kd">extends</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">MyHomePage</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57"></a>
+<a id="__codelineno-4-58" name="__codelineno-4-58"></a>    <span class="c1">// initially, the variable “_counter” is 0.</span>
+<a id="__codelineno-4-59" name="__codelineno-4-59"></a>    <span class="kt">int</span> <span class="n">_counter</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+<a id="__codelineno-4-60" name="__codelineno-4-60"></a>
+<a id="__codelineno-4-61" name="__codelineno-4-61"></a>    <span class="c1">// this is a method that does not return anything (=void)</span>
+<a id="__codelineno-4-62" name="__codelineno-4-62"></a>    <span class="kt">void</span> <span class="n">_incrementCounter</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63"></a>
+<a id="__codelineno-4-64" name="__codelineno-4-64"></a>        <span class="c1">// when the method is called: we tell the widget to update the state</span>
+<a id="__codelineno-4-65" name="__codelineno-4-65"></a>        <span class="n">setState</span><span class="p">(()</span> <span class="p">{</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66"></a>            <span class="c1">// the variable _counter is increased by one</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67"></a>            <span class="n">_counter</span> <span class="o">=</span> <span class="n">_counter</span> <span class="o">+</span> <span class="m">1</span><span class="p">;</span>
+<a id="__codelineno-4-68" name="__codelineno-4-68"></a>        <span class="p">});</span>
+<a id="__codelineno-4-69" name="__codelineno-4-69"></a>    <span class="p">}</span>
+<a id="__codelineno-4-70" name="__codelineno-4-70"></a>
+<a id="__codelineno-4-71" name="__codelineno-4-71"></a>
+<a id="__codelineno-4-72" name="__codelineno-4-72"></a>
+<a id="__codelineno-4-73" name="__codelineno-4-73"></a>    <span class="nd">@override</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74"></a>    <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-75" name="__codelineno-4-75"></a>        <span class="c1">// this build method returns the “Scaffold” widget</span>
+<a id="__codelineno-4-76" name="__codelineno-4-76"></a>        <span class="c1">// the scaffold widget should only be used once per page</span>
+<a id="__codelineno-4-77" name="__codelineno-4-77"></a>        <span class="k">return</span> <span class="n">Scaffold</span><span class="p">(</span>
+<a id="__codelineno-4-78" name="__codelineno-4-78"></a>            <span class="c1">// it provides a scaffold, in which we can easily add an Appbar</span>
+<a id="__codelineno-4-79" name="__codelineno-4-79"></a>            <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
+<a id="__codelineno-4-80" name="__codelineno-4-80"></a>            <span class="nl">title:</span> <span class="k">const</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Flutter Demo Home Page&#39;</span><span class="p">),</span>
+<a id="__codelineno-4-81" name="__codelineno-4-81"></a>        <span class="p">),</span>
+<a id="__codelineno-4-82" name="__codelineno-4-82"></a>        <span class="c1">// the center widget</span>
+<a id="__codelineno-4-83" name="__codelineno-4-83"></a>        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
+<a id="__codelineno-4-84" name="__codelineno-4-84"></a>            <span class="c1">// contains a column. A column can have multiple widgets below each other</span>
+<a id="__codelineno-4-85" name="__codelineno-4-85"></a>            <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+<a id="__codelineno-4-86" name="__codelineno-4-86"></a>                <span class="c1">// we want to have the text widgets within the column widget</span>
+<a id="__codelineno-4-87" name="__codelineno-4-87"></a>                <span class="c1">// centered horizontally</span>
+<a id="__codelineno-4-88" name="__codelineno-4-88"></a>                <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
+<a id="__codelineno-4-89" name="__codelineno-4-89"></a>                <span class="nl">children:</span> <span class="p">[</span>
+<a id="__codelineno-4-90" name="__codelineno-4-90"></a>                    <span class="c1">// displaying a text widget</span>
+<a id="__codelineno-4-91" name="__codelineno-4-91"></a>                    <span class="k">const</span> <span class="n">Text</span><span class="p">(</span>
+<a id="__codelineno-4-92" name="__codelineno-4-92"></a>                        <span class="s1">&#39;You have pushed the button this many times:&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-93" name="__codelineno-4-93"></a>                    <span class="p">),</span>
+<a id="__codelineno-4-94" name="__codelineno-4-94"></a>                    <span class="c1">// displaying another text widget</span>
+<a id="__codelineno-4-95" name="__codelineno-4-95"></a>                    <span class="n">Text</span><span class="p">(</span>
+<a id="__codelineno-4-96" name="__codelineno-4-96"></a>                        <span class="c1">// this is the variable as string</span>
+<a id="__codelineno-4-97" name="__codelineno-4-97"></a>                        <span class="s1">&#39;</span><span class="si">$</span><span class="n">_counter</span><span class="s1">&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-98" name="__codelineno-4-98"></a>                        <span class="c1">// we can define a style here. This uses the default text theme of      headline 6</span>
+<a id="__codelineno-4-99" name="__codelineno-4-99"></a>                        <span class="nl">style:</span> <span class="n">Theme</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="n">textTheme</span><span class="p">.</span><span class="n">headline4</span><span class="p">,</span>
+<a id="__codelineno-4-100" name="__codelineno-4-100"></a>                    <span class="p">),</span>
+<a id="__codelineno-4-101" name="__codelineno-4-101"></a>                <span class="p">],</span>
+<a id="__codelineno-4-102" name="__codelineno-4-102"></a>            <span class="p">),</span>
+<a id="__codelineno-4-103" name="__codelineno-4-103"></a>        <span class="p">),</span>
+<a id="__codelineno-4-104" name="__codelineno-4-104"></a>            <span class="c1">// the scaffold widget can (!) also have a floating action button</span>
+<a id="__codelineno-4-105" name="__codelineno-4-105"></a>            <span class="nl">floatingActionButton:</span> <span class="n">FloatingActionButton</span><span class="p">(</span>
+<a id="__codelineno-4-106" name="__codelineno-4-106"></a>
+<a id="__codelineno-4-107" name="__codelineno-4-107"></a>                <span class="c1">// when the button is pressed, the method _incrementCounter is triggered</span>
+<a id="__codelineno-4-108" name="__codelineno-4-108"></a>                <span class="nl">onPressed:</span> <span class="n">_incrementCounter</span><span class="p">,</span>
+<a id="__codelineno-4-109" name="__codelineno-4-109"></a>
+<a id="__codelineno-4-110" name="__codelineno-4-110"></a>                <span class="c1">// the button contains an icon with the iconData “Icon.add”</span>
+<a id="__codelineno-4-111" name="__codelineno-4-111"></a>                <span class="nl">child:</span> <span class="k">const</span> <span class="n">Icon</span><span class="p">(</span><span class="n">Icons</span><span class="p">.</span><span class="n">add</span><span class="p">),</span>
+<a id="__codelineno-4-112" name="__codelineno-4-112"></a>            <span class="p">),</span>
+<a id="__codelineno-4-113" name="__codelineno-4-113"></a>        <span class="p">);</span>
+<a id="__codelineno-4-114" name="__codelineno-4-114"></a>    <span class="p">}</span>
+<a id="__codelineno-4-115" name="__codelineno-4-115"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../curriculum/" class="md-footer__link md-footer__link--next" aria-label="Next: Curriculum" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Curriculum
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+    
+  </body>
+</html>

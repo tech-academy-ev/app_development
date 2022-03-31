@@ -1,0 +1,30 @@
+site_name: App Development with Flutter
+theme:
+  name: material 
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny 
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+nav:
+  - Home: index.md
+  - Introduction to Flutter: flutter.md
+  - Curriculum: curriculum.md
+  - Course: course.md
+  - Project: project.md
+  - Additional Resources: additional_resources.md
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
