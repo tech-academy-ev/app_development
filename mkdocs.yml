@@ -1,6 +1,7 @@
 site_name: App Development with Flutter
 theme:
   name: material 
+  logo: images/white_logo_transparent.png
   palette:
     - scheme: default
       toggle:
