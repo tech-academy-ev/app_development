@@ -13,5 +13,4 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: cd ../tech-academy-ev.github.io/
       - run: mkdocs gh-deploy --force --config-file ../SoSe22_App_Dev/mkdocs.yml
