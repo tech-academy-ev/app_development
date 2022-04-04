@@ -12,9 +12,9 @@ Flutter is executed using ahead-of-time compilers (AOT compilers). Only in the d
 
 The framework is essentially constructed from three process units. 
 
-<figure>
-    <image src="/images/archdiagram.png" alt="Flutter Architecture">
-    <figcaption>Source: https://docs.flutter.dev/resources/architectural-overview</figcaption>
+<figure markdown>
+  ![Flutter Architecture](/images/archdiagram.png){ width="auto" }
+  <figcaption><small>Source: https://docs.flutter.dev/resources/architectural-overview</small></figcaption>
 </figure>
 
 ### Embedder

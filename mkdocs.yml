@@ -29,3 +29,5 @@ markdown_extensions:
       custom_checkbox: true
   - admonition
   - pymdownx.details
+  - attr_list
+  - md_in_html
