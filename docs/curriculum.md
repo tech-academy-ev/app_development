@@ -9,12 +9,12 @@ The app track includes six dates in which participants are introduced to app dev
     
     - Work on Udemy Course (Section 1-3)
     - As explained in secion 1 of the udemy course, install and setup flutter:
-    1. Install Flutter and its dependencies https://docs.flutter.dev/get-started/install/windows / https://docs.flutter.dev/get-started/install/macos
+    1. Install Flutter and its dependencies [https://docs.flutter.dev/get-started/install/windows](https://docs.flutter.dev/get-started/install/windows) / [https://docs.flutter.dev/get-started/install/macos](https://docs.flutter.dev/get-started/install/macos)
     2. Open your terminal -> enter `flutter doctor` and verify no issues need to be resolved
     3. Install VS Code and the extensions "flutter" and "dart"
 
 
-#### 4.2 Flutter Coding Introduction (xx.xx.2022)
+#### 4.2 Flutter Coding Introduction (04.05.2022)
 - Participants are expected to have completed Udemy Course Section 1-3 until today
 - Explanation of Flutter & Dart basics.
 - Difference Stateless and Stateful Widget
