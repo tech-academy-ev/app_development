@@ -27,10 +27,11 @@ The app track includes six dates in which participants are introduced to app dev
 
 
 #### 4.3 Coding MeetUp 1 (18.05.2022)
-Participants are expected to have completed Udemy Course Section 4 until today
-Brief Introduction to git
-Introduction to “SharedPreferences” (Local Storage)
-Presentation of the project (see below)
+- Participants are expected to have completed Udemy Course Section 4 until today
+
+- Brief Introduction to git
+- Introduction to “SharedPreferences” (Local Storage)
+- Presentation of the project (see below)
 
 !!! todo "Sprint 2"
     
@@ -50,9 +51,9 @@ Presentation of the project (see below)
 
 
 #### 4.4 Coding MeetUp 2 (01.06.2022)
-Flutter Tips by Steffen
-Discussion about the project and you can ask for help
-If you have not completed the recommended tasks, do not hesitate to reach out for help.
+- Flutter Tips by Steffen
+- Discussion about the project and you can ask for help
+- If you have not completed the recommended tasks, do not hesitate to reach out for help.
 
 !!! todo "Sprint 3"
     
@@ -65,8 +66,8 @@ If you have not completed the recommended tasks, do not hesitate to reach out fo
     
 
 #### 4.5 Coding MeetUp 3 (15.06.2022)
-Discussion about the project and the participants will have the chance to ask for help
-If you have not completed the recommended tasks, do not hesitate to reach out for help.
+- Discussion about the project and the participants will have the chance to ask for help
+- If you have not completed the recommended tasks, do not hesitate to reach out for help.
 
 !!! todo "Sprint 4"
     
@@ -75,8 +76,8 @@ If you have not completed the recommended tasks, do not hesitate to reach out fo
 
 
 #### 4.6 Coding MeetUp 4 (29.06.2022)
-Discussion about the project and the participants will have the chance to ask for help
-If you have not completed the recommended tasks, do not hesitate to reach out for help.
+- Discussion about the project and the participants will have the chance to ask for help
+- If you have not completed the recommended tasks, do not hesitate to reach out for help.
 
 
 !!! todo "Sprint 5"
