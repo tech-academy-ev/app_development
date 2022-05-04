@@ -13,10 +13,13 @@ Ahead-of-Time (AOT) compilation comes into the picture when the flutter app is r
 
 You do not need to know dart in detail to build a flutter app. Actually, you can even pick up dart while learning flutter and you do not have to learn dart before. However, knowledge of the programming language will help you develop apps.
 
-### Variables and Constants
+### Variables and Data Types
 ``` dart linenums="1"
 main() {
     var dog1 = "Max"; // this is a variable
+    String dog1 = "Max"; // declare a string --> try to always declare the type of your variable
+    int dogAge = 12;
+    double dogFoodPrice = 12.99;
 
     // a variable can be final, which means that it must be initialized. Once assigned a  value, a final variable's value cannot be changed.
     final maleDogs = ["Milo"]; // mutable single-assignment variable
