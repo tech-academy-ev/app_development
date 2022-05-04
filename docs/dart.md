@@ -20,6 +20,7 @@ You do not need to know dart in detail to build a flutter app. Actually, you can
 main() {
     // Variables
     var dog1 = "Max"; // this is a variable (which can be assigned to values of different data types)
+    bool isDog = true;
     dynamic dog1 = "Max"; // this is a variable (which can be assigned to values of different data types - and reassigned with values of different data types)
     String dog1 = "Max"; // declare a string --> try to always declare the type of your variable
     int dogAge = 12; // integer
@@ -105,12 +106,12 @@ main() {
 
 ``` dart linenums="1"
 main() {
-    var collar = false,
-    toys = null,
-    amountOfMeals = 0 / 0, // NaN
-    owner = "",
-    age = 0,
-    name;
+    bool collar = false,
+    String? toys = null,
+    amountOfMeals = 0 / 0, // NaN - Not a Number (undefined)
+    owner = "", // empty string
+    age = 0, // integer
+    String? name; // nullable String
 
     if (!collar) print('bark'); // bark (means: if not false → if true)
     // same as: 
