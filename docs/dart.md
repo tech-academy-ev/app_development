@@ -106,21 +106,26 @@ main() {
 
 ``` dart linenums="1"
 main() {
-    bool collar = false,
-    String? toys = null,
-    amountOfMeals = 0 / 0, // NaN - Not a Number (undefined)
-    owner = "", // empty string
-    age = 0, // integer
-    String? name; // nullable String
+    const bool hasCollar = false;
+    const String? toys = null;
+    const double amountOfMeals = 0 / 0, // NaN - Not a Number (undefined)
+    const String owner = "", // empty string
+    const int age = 0, // integer
+    final String? name; // nullable String
 
-    if (!collar) print('bark'); // bark (means: if not false → if true)
+    if (!hasCollar) print('bark'); // bark (means: if not false → if true)
     // same as: 
-    if (!collar) {print('bark');} // bark 
+    if (hasCollar == false) print('bark');
+    if (!hasCollar) {print('bark');} // bark 
 
     if (toys == null) print('bark'); // bark (checks if toys is null)
+    
     if (amountOfMeals.isNaN) print('bark'); // bark
+    
     if (owner.isEmpty) print('bark'); // bark (the string is empty)
+    
     if (age == 0) print('bark'); // bark (checks if age is zero)
+    
     if (name == null) print('bark'); // bark (checks if breed is null) 
 }
 ```
