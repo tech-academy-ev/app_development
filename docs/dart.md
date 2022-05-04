@@ -11,28 +11,98 @@ Ahead-of-Time (AOT) compilation comes into the picture when the flutter app is r
 
 ​​Dart is an open-source, general-purpose, object-oriented programming language with C-style syntax developed by Google in 2011. The purpose of Dart programming is to create a frontend user interface for the web and mobile apps. It is inspired by other programming languages such as Java, JavaScript, C#, and is Strongly Typed. Since Dart is a compiled language so you cannot execute your code directly; instead, the compiler parses it and transfers it into machine code. If you know javascript, dart is very easy to learn. Dart supports most of the common concepts of programming languages like classes, interfaces, and functions. 
 
-You do not need to know dart in detail to build a flutter app. Actually, you can even pick up dart while learning flutter and you do not have to learn dart before. However, knowledge of the programming language will help you develop apps.
+You do not need to know dart in detail to build a flutter app. Actually, you can even pick up dart while learning flutter and you do not have to learn dart before. However, knowledge of the programming language will help you develop apps. Hence, we prepared some examples that may teach you some important charactistics of the dart programming language. Remember that the following list only provides some features of the programming language, there are many many more features which we do not cover.
+
+
 
 ### Variables and Data Types
 ``` dart linenums="1"
 main() {
-    var dog1 = "Max"; // this is a variable
+    // Variables
+    var dog1 = "Max"; // this is a variable (which can be assigned to values of different data types)
+    dynamic dog1 = "Max"; // this is a variable (which can be assigned to values of different data types - and reassigned with values of different data types)
     String dog1 = "Max"; // declare a string --> try to always declare the type of your variable
-    int dogAge = 12;
-    double dogFoodPrice = 12.99;
+    int dogAge = 12; // integer
+    double dogFoodPrice = 12.99; // double
+    
+    // Assigning new values to variables
+    // if you want to assign a new variable, drop the data type and use the same name:
+    var dog1 = "Max";
+    dog1 = 23; // ❌ this is not allowed (once the variable was assigned to a string value, it must remain a string variable)
+    
+    dynamic dog1 = "Max";
+    dog1 = 23; // ✅  this is allowed as the data type is "dynamic"
+      
+}
+```
 
-    // a variable can be final, which means that it must be initialized. Once assigned a  value, a final variable's value cannot be changed.
+``` dart linenums="1"
+main() {
+    // Lists
+    List<String> foodList = ["cake", "pizza"]; // this is List which can only contain strings
+    List<String?> foodList = ["cake", "pizza", null]; // this is List which can only contain strings and nulls
+    List<int> quanityList = [4, 5, 4]; // this is List which can only contain integers
+    List<double> priceList = [4.32, 5.29, 4.22]; // this is List which can only contain doubles
+    List someList = ["cake", 3, 4.32] // is the same as List<dynamic>
+      
+}
+```
+
+``` dart linenums="1"
+main() {
+    // final and constant variables
+    
+    // 1.) CONSTANT
+    // Value must be known at compile-time. Can't be changed after initialized.
+    const femaleDogs = ["Luna", "Bella"]; // compile time constant
+    
+    femaleDogs.add("Winona"); // ❌ this is not allowed (you cannot change the variable)
+    femaleDogs = ["Winona"]; // ❌ this is not allowed  (you cannot re-assign the variable)
+    
+    // 2.) FINAL
+    // Value must be known at run-time, 
+    final birthday = getBirthDateFromDB();
+    or
     final maleDogs = ["Milo"]; // mutable single-assignment variable
     maleDogs.add("Cooper"); // ✅ this is allowed (you can add an element to the list)
     maleDogs = ["Cooper"]; // ❌ this is not allowed (you cannot reassign the variable)
-
-    const femaleDogs = ["Luna", "Bella"]; // compile time constant
-    femaleDogs.add("Winona"); // ❌ this is not allowed (you cannot change the variable)
-    femaleDogs = ["Winona"]; // ❌ this is not allowed  
 }
 ```
+
+### Maps (/jsons)
+``` dart linenums="1"
+void main() { 
+  Map<String, String> foo = Map(); //  you can also only write Map foo = {};
+  foo['First'] = 'test1'; 
+  foo['Second'] = 'test2'; 
+  print(foo); // = {"First": "test1", "Second": "test2"}
+}  
+```
+
+
 ### Null and Conditions
 In Dart, undefined values are null. Expressions in conditionals may only be boolean.
+
+``` dart linenums="1"
+main() {
+    const int foo1 = 5;
+    const int foo2 = 10;
+    
+    
+    if (foo1 > foo2) {
+        return 'foo';
+    } else {
+        return null;
+    }
+    
+    // is the same as: (The following expression is often used in Flutter)
+    
+    foo1 > foo2 ? 'foo' : null;
+    
+    
+}
+```
+
 ``` dart linenums="1"
 main() {
     var collar = false,
@@ -40,7 +110,7 @@ main() {
     amountOfMeals = 0 / 0, // NaN
     owner = "",
     age = 0,
-    breed;
+    name;
 
     if (!collar) print('bark'); // bark (means: if not false → if true)
     // same as: 
@@ -50,9 +120,11 @@ main() {
     if (amountOfMeals.isNaN) print('bark'); // bark
     if (owner.isEmpty) print('bark'); // bark (the string is empty)
     if (age == 0) print('bark'); // bark (checks if age is zero)
-    if (breed == null) print('bark'); // bark (checks if breed is null) 
+    if (name == null) print('bark'); // bark (checks if breed is null) 
 }
 ```
+
+
 ### Collection literals
 An Array in Javascript is a List in Dart. An Object in Javascript is a Map in Dart.
 ``` dart linenums="1"
