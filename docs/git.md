@@ -16,14 +16,13 @@ git init
 ```
 git remote add origin git@github.com:SKnoedler/test
 ```
-4. Authenticate
-
-- Install GitHub CLI (https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
-```
-brew install gh
-gh auth login
-```
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/41230924/169048067-ffbeb8d8-6f40-4811-a90d-32b2f0cda07f.png">
+4. Authenticate (https or ssh)
+4.1 SSH (mac os)
+- mkdir -p ~/.ssh
+- ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+- ssh-keygen -t rsa -C "user.email"
+- open the public key with this command $ cat ~/.ssh/id_rsa.pub and copy it.
+- Add the id_rsa.pub key to SSH keys list on your GitHub profile.
 
 
  
