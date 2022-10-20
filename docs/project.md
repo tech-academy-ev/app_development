@@ -2,6 +2,9 @@
 
 As part of the project you will work on your own app. The idea is to build an app for Tech-Academy participants. The app provides space for tech-academy related notes and offers easy and fast access to certain pages of the Tech-Academy website. To complete this course, you are asked to meet the defined requirements. The following requirement section is divided in two parts. First, the project user-stories are presented. In software development, a user story is an informal description of features of a software product. This type of feature description is commonly used in the industry. The user stories have one or multiple acceptance criteria attached. Second, the technical requirements are listed. To complete the project and pass this track, you are asked to fulfill all acceptance criteria as well as to meet all technical requirements.
 
+![WhatsApp Image 2022-10-20 at 11 49 00](https://user-images.githubusercontent.com/41230924/196933464-3787309d-e8f7-4c7c-8e4c-c0c8384a6330.jpeg)
+
+
 ## Requirements
 
 As a TechAcademy participant, I want to manage my own TechAcademy tasks in a Flutter app. To do that, I need six features. 
