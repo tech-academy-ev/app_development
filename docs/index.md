@@ -2,7 +2,7 @@
 
 ## Introduction
 Welcome!
-We are happy to introduce you to the newest offering of our semester program: the App Development Track!  Guiding you through your project will be Steffen Knödler. Steffen graduated with a Bachelor's degree in Economics & Business Administration from Goethe University. He holds a Master’s degree in IT and Digital innovation and has been working as a Full-Stack Flutter developer for almost 2 years. 
+We are happy to introduce you to the newest offering of our semester program: the App Development Track!  Guiding you through your project will be Steffen Knödler. Steffen graduated with a Bachelor's degree in Economics & Business Administration from Goethe University. He holds a Master’s degree in IT and Digital innovation and has been working as a Full-Stack Flutter developer for more than 2 years. 
 
 In this track you will be introduced to the platform framework Flutter. Why Flutter?  In the last year, Flutter has overtaken other tools and become the most popular toolkit for cross-platform mobile development. By February 2022, nearly 500,000 Flutter apps have already been published to the Google Play Store. Many large companies such as BMW, Alibaba, Philips and Google also develop apps based on Flutter and its community is growing. Like no other framework, Flutter offers the possibility to develop with one codebase (Dart).  Although the framework can be compiled for other platforms, such as web, macOS and Windows, this course will focus primarily on mobile app development, as it is very mature in mobile app development on Android and iOS.
 
