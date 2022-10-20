@@ -1,7 +1,7 @@
 # Curriculum
 The app track includes six dates in which participants are introduced to app development with Flutter and have the chance to support each other in app development. The following bullet points are intended to give an overview of the course and provide more information about the app development track.
 
-#### 4.1 Kick-Off Workshop (27.04.2022)
+#### 4.1 Kick-Off Workshop (XX.XX.2022)
 - Introduction of Udemy course (see below)
 - Get to know other participants
 
@@ -14,7 +14,7 @@ The app track includes six dates in which participants are introduced to app dev
     3. Install VS Code and the extensions "flutter" and "dart"
 
 
-#### 4.2 Flutter Coding Introduction (04.05.2022)
+#### 4.2 Flutter Coding Introduction (XX.XX.2022)
 - Participants are expected to have completed Udemy Course Section 1-3 until today
 - Explanation of Flutter & Dart basics.
 - Difference Stateless and Stateful Widget
@@ -26,7 +26,7 @@ The app track includes six dates in which participants are introduced to app dev
     - Work on Udemy Course (Section 4)
 
 
-#### 4.3 Coding MeetUp 1 (18.05.2022)
+#### 4.3 Coding MeetUp 1 (XX.XX.2022)
 - Participants are expected to have completed Udemy Course Section 4 until today
 
 - Brief Introduction to git
@@ -50,7 +50,7 @@ The app track includes six dates in which participants are introduced to app dev
     11. Make sure you had created a Form() and added a FormKey [https://docs.flutter.dev/cookbook/forms/validation](https://docs.flutter.dev/cookbook/forms/validation) 
 
 
-#### 4.4 Coding MeetUp 2 (01.06.2022)
+#### 4.4 Coding MeetUp 2 (XX.XX.2022)
 - Flutter Tips by Steffen
 - Discussion about the project and you can ask for help
 - If you have not completed the recommended tasks, do not hesitate to reach out for help.
@@ -65,7 +65,7 @@ The app track includes six dates in which participants are introduced to app dev
     Attention: It is fine if the user can only save one note. As soon as a new note is entered the previous note can be overwritten. You do not have to implement the logic of adding an unlimited number of notes.
     
 
-#### 4.5 Coding MeetUp 3 (15.06.2022)
+#### 4.5 Coding MeetUp 3 (XX.XX.2022)
 - Discussion about the project and the participants will have the chance to ask for help
 - If you have not completed the recommended tasks, do not hesitate to reach out for help.
 
@@ -75,7 +75,7 @@ The app track includes six dates in which participants are introduced to app dev
     - Add the “edit-profile” feature and make sure you use Forms() and a StatefulWidget again. The concept is the same.
 
 
-#### 4.6 Coding MeetUp 4 (29.06.2022)
+#### 4.6 Coding MeetUp 4 (XX.XX.2022)
 - Discussion about the project and the participants will have the chance to ask for help
 - If you have not completed the recommended tasks, do not hesitate to reach out for help.
 
@@ -85,4 +85,4 @@ The app track includes six dates in which participants are introduced to app dev
     - Working on last details and making sure all requirements are met. 
 
 
-## Deadline: Hand-In on 03.07.2022
+## Deadline: Hand-In on XX.XX.2022
