@@ -85,4 +85,4 @@ The app track includes six dates in which participants are introduced to app dev
     - Working on last details and making sure all requirements are met. 
 
 
-## Deadline: Hand-In on XX.XX.2022
+## Deadline: Hand-In on 04.02.2023 (11.59PM)
