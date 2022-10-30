@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force --config-file ../SoSe22_App_Dev/mkdocs.yml
+      - run: mkdocs gh-deploy --force --config-file ../app_development/mkdocs.yml
